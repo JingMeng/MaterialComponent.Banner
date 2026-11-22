@@ -9,12 +9,20 @@ import android.view.animation.Animation
 import android.view.animation.Transformation
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.main.material_banner.view.*
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
+import com.google.android.material.button.MaterialButton
 
 /**
  * TODO: document your custom view class.
  */
 class Banner : CoordinatorLayout {
+    private val contentTextView: TextView get() = findViewById(R.id.contentTextView)
+    private val contentIconView: ImageView get() = findViewById(R.id.contentIconView)
+    private val leftButton: MaterialButton get() = findViewById(R.id.leftButton)
+    private val rightButton: MaterialButton get() = findViewById(R.id.rightButton)
+    private val linearLayout3: ConstraintLayout get() = findViewById(R.id.linearLayout3)
 
     private var _contentText: String? = "Please fill me in" // TODO: use a default from R.string...
     private var _leftButtonText: String? = "Dismiss" // TODO: use a default from R.string...
